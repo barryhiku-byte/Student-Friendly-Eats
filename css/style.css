@@ -83,9 +83,9 @@ body {
 }
 
 .img {
-    width: 200px;
+    width: 50rem;
     /* set a fixed width */
-    height: 200px;
+    height: 50rem;
     /* set a fixed height */
     object-fit: cover;
     /* crop to fill without distortion */
@@ -162,6 +162,7 @@ body {
     object-fit: contain;
     /* ensures no cropping or distortion */
     border-radius: 12px;
+    padding: 10rem;
     transition: transform 0.3s ease;
 }
 
