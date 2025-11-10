@@ -48,3 +48,55 @@ autoSlideShow() // Call to run auto slideshow
     img.style.height = `${height}px`;
     img.style.objectFit = 'cover';
   });
+
+  document.getElementById('signupForm').addEventListener('submit', function(event) {
+
+      event.preventDefault(); // stop page from reloading
+ 
+      const name = document.getElementById('name').value.trim();
+
+      const email = document.getElementById('email').value.trim();
+
+      const mobile = document.getElementById('mobile').value.trim();
+
+      const consent = document.getElementById('consent').checked;
+ 
+      if (!name || !email || !mobile) {
+
+        document.getElementById('message').textContent = 'Please fill out all required fields.';
+
+        document.getElementById('message').style.color = 'red';
+
+        return;
+
+      }
+ 
+      // Create a user object
+
+      const user = { name, email, mobile, consent };
+ 
+      // Retrieve existing users from localStorage
+
+      let users = JSON.parse(localStorage.getItem('signupUsers')) || [];
+ 
+      // Add new user
+
+      users.push(user);
+ 
+      // Save updated list
+
+      localStorage.setItem('signupUsers', JSON.stringify(users));
+ 
+      // Reset form
+
+      document.getElementById('signupForm').reset();
+ 
+      // Show confirmation message
+
+      document.getElementById('message').textContent = 'Thanks for signing up!';
+
+      document.getElementById('message').style.color = 'green';
+ 
+      console.log('Current stored users:', users);
+
+    });
