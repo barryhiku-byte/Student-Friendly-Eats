@@ -101,7 +101,7 @@ body {
     position: fixed;
     z-index: 2;
     /* ensures it's above hero */
-    background-color: rgb(165, 201, 57);
+    background-color: rgb(168, 167, 167);
     /* transparent overlay */
     width: 100%;
     justify-content: center;
@@ -118,7 +118,7 @@ body {
 }
 
 .webnav a:hover {
-    background-color: rgb(255, 223, 183);
+    background-color: rgb(168, 167, 167);
     color: black;
 }
 
@@ -131,7 +131,7 @@ body {
     border-radius: 5px;
     box-shadow: 4px 8px;
     box-shadow: 2px 7px 12px;
-    background-color: rgb(165, 201, 57);
+    background-color: rgb(168, 167, 167);
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -381,5 +381,87 @@ body {
     border: 2px solid #ccc;
     border-radius: 10px;
 }
+
+.no1chicken {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid rgb(84, 83, 83);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Quicksand', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.no1chicken:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.no1chicken h1 {
+    color: rgb(84, 83, 83);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.no1chicken p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 12px 0;
+    padding: 0;
+    background: none;
+    font-weight: 400;
+}
+
+/* Apply same styling to all location info divs */
+.food-locations-one > div:has(h1),
+.food-locations-two > div:has(h1),
+.food-locations-three > div:has(h1),
+.food-locations-four > div:has(h1) {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid rgb(84, 83, 83);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Quicksand', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.food-locations-one > div:has(h1):hover,
+.food-locations-two > div:has(h1):hover,
+.food-locations-three > div:has(h1):hover,
+.food-locations-four > div:has(h1):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.food-locations-one h1,
+.food-locations-two h1,
+.food-locations-three h1,
+.food-locations-four h1 {
+    color: rgb(84, 83, 83);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.food-locations-one p,
+.food-locations-two p,
+.food-locations-three p,
+.food-locations-four p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 12px 0;
+    padding: 0;
+    background: none;
+    font-weight: 400;
+}
+
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
