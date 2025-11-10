@@ -93,7 +93,7 @@ document.querySelectorAll(".js-scale").forEach((el) => {
     { scale: 0.1, opacity: -1 },
     { 
       scale: 1.0,
-      opacity: 1,
+      opacity: 2,
       ease: "power2.out",
       duration: 1
     }
