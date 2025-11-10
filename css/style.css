@@ -9,6 +9,7 @@
     width: 100%;
     height: 300px;
     /* same as hero height */
+    background: transparent;
 }
 
 .body {
@@ -71,8 +72,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
-    /* just one layer behind the nav */
+    z-index: 0;
+    /* behind the nav but visible */
 }
 
 /* Keep the body spacing consistent */
@@ -94,14 +95,28 @@ body {
 }
 
 .webnav {
+    display: block;
     position: relative;
     z-index: 2;
-    /* ensures it’s above hero */
+    /* ensures it's above hero */
     background-color: rgb(165, 201, 57);
     /* transparent overlay */
     width: 100%;
     text-align: center;
     padding: 5px 0px;
+}
+
+.webnav a {
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+}
+
+.webnav a:hover {
+    background-color: rgb(255, 223, 183);
+    color: black;
 }
 
 .paragraphs {
