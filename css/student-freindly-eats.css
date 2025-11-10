@@ -1,0 +1,127 @@
+/* CSS Variables */
+:root {
+  --bg: #0b1020;
+  --accent: #3c00c7;
+  --text: #f8fafc;
+}
+
+/* Basic page styling */
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  margin: 0 0 12px 0;
+  font-size: clamp(24px, 4vw, 44px);
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+  opacity: 0.92;
+  line-height: 1.5;
+}
+
+/* Card styling for animations */
+.card {
+  transform-origin: center center;
+  will-change: transform, opacity;
+  overflow-y: hidden;
+  max-height: 80vh;
+}
+
+.card iframe {
+  pointer-events: auto;
+}
+
+.spacer {
+  height: 230vh;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: visible;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.progress-bar.active {
+  opacity: 1;
+}
+
+.progress-fill {
+  width: 100%;
+  background: linear-gradient(180deg, #9e9e9e, #000000);
+  height: 0%;
+  transition: height 0.1s ease;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Progress markers */
+.progress-marker {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.progress-marker.active {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.progress-label {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.progress-marker.active + .progress-label {
+  opacity: 1;
+  color: #000000;
+  left: 10px;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 2px 5px; 
+  background: rgba(255, 255, 255, 0.9); /* Changed from 0.1 to 0.9 - much more opaque */
+}
+
+/* Popup animation */
+.fullscreen-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgba(139, 92, 246, 0.9);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+}

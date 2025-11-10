@@ -10,7 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/student-freindly-eats.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="js/animation.js" defer></script>
     <title>Student-friendly Eats</title>
   </head>
 
@@ -47,9 +57,15 @@
       <div class="student-friendly_eats-hero">
         <h1>Student friendly Eats</h1>
       </div>
+      
+      </div>
     </header>
     <main>
-      <section class="paragraphs">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <section class="paragraphs" data-section-name="Introduction">
         <p>
           Here, you will find a list of affordable restaurants that are located
           within
@@ -65,7 +81,7 @@
         </p>
       </section>
 
-      <section class="food-locations-one">
+      <section class="food-locations-one card js-scale" data-section-name="Chicken and tacos" >
         <div>
           <h1>No.1 chicken</h1>
           <p>
@@ -100,6 +116,8 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+      </section>
+      <section class="food-locations-two card js-scale" data-section-name="Burgers And sushie">
         <div>
           <h1>Sushi Pac</h1>
           <p>
@@ -118,13 +136,16 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </section>
-      <section class="food-locations-two">
         <div>
           <h1>Burger Express</h1>
-          <p></p>
+          <p>
+            Burger Express serves up delicious burgers at student-friendly
+            prices. <br />
+            A great spot for a quick and satisfying meal.
+          </p>
+          <p>Address: Queen St, Auckland CBD, Auckland 1010</p>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.7662206748378!2d174.76380491011915!3d-36.84807457211767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb1185c959%3A0xced2463c6544e6cb!2sSushi%20Pac%20High%20Street!5e0!3m2!1sen!2snz!4v1762750263933!5m2!1sen!2snz"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.729563321004!2d174.7617205101192!3d-36.8489523721175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47007f31870f%3A0x2702af246f72c67e!2sBurger%20Express!5e0!3m2!1sen!2snz!4v1762750300700!5m2!1sen!2snz"
             width="600"
             height="450"
             style="border: 0"
@@ -133,8 +154,16 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+      </section>
+
+      <section class="food-locations-three card js-scale" data-section-name="Noodles & Pizza">
         <div>
           <h1>Zhou's Alley Noodles Restaurant</h1>
+          <p>
+            Authentic Chinese noodles at affordable prices. <br />
+            Perfect for students craving delicious Asian cuisine.
+          </p>
+          <p>Address: High St, Auckland CBD, Auckland 1010</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.753805058848!2d174.76341287662635!3d-36.8483718794856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb18fe2489%3A0x341fabbd499a55dc!2zWmhvdSdzIEFsbGV5IE5vb2RsZXMgUmVzdGF1cmFudCDlkajlrrbog6HlkIw!5e0!3m2!1sen!2snz!4v1762762324388!5m2!1sen!2snz"
             width="600"
@@ -147,6 +176,11 @@
         </div>
         <div>
           <h1>Domino's Pizza</h1>
+          <p>
+            Classic pizza chain with great student deals. <br />
+            Affordable and convenient for a quick meal.
+          </p>
+          <p>Address: Queen St (Elliott St), Auckland CBD, Auckland 1010</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.7232240033663!2d174.76182801011916!3d-36.84910417211735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d48ad8fd98847%3A0x741e0c067682b115!2sDomino&#39;s%20Pizza%20Queen%20St%20(Elliott%20St)!5e0!3m2!1sen!2snz!4v1762750342718!5m2!1sen!2snz"
             width="600"
@@ -158,9 +192,15 @@
           ></iframe>
         </div>
       </section>
-      <section class="food-locations-three">
+ 
+      <section class="food-locations-four card js-scale" data-section-name="Food Courts and asian">
         <div>
           <h1>The Food Junction</h1>
+          <p>
+            A variety of food options under one roof. <br />
+            Great for groups with different tastes and budgets.
+          </p>
+          <p>Address: Queen St, Auckland CBD, Auckland 1010</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.7098228292634!2d174.76142181011923!3d-36.849425072117256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d474751fa7385%3A0xfaaf8a3c4cdd2656!2sThe%20Food%20Junction!5e0!3m2!1sen!2snz!4v1762750393210!5m2!1sen!2snz"
             width="600"
@@ -173,6 +213,11 @@
         </div>
         <div>
           <h1>Pophut Asian Food Restaurant</h1>
+          <p>
+            Affordable Asian cuisine with generous portions. <br />
+            Popular among students for its value and taste.
+          </p>
+          <p>Address: Auckland Central, Auckland 1010</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.697595057936!2d174.76131221011926!3d-36.84971787211731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e536ca1a61%3A0xd10bd2bd1ff200bf!2sPophut%20%7C%20Asian%20Food%20Restaurant%20in%20Auckland%20Central!5e0!3m2!1sen!2snz!4v1762750797159!5m2!1sen!2snz"
             width="600"
@@ -183,22 +228,16 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div>
-          <h1>Hiwa Recreation Centre</h1>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.580767194877!2d174.76647111011943!3d-36.85251527211641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e375b5143b%3A0xc0f98f41cd0f8e5b!2sHiwa%20Recreation%20Centre!5e0!3m2!1sen!2snz!4v1762750846936!5m2!1sen!2snz"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
       </section>
-      <section class="food-locations-four">
+
+      <section class="food-locations-five card js-scale" data-section-name="Sandwiches & Fried Chicken">
         <div>
           <h1>Subway</h1>
+          <p>
+            Fresh sandwiches made to order at affordable prices. <br />
+            A healthy option for students on the go.
+          </p>
+          <p>Address: Auckland CBD, Auckland 1010</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.5140264786887!2d174.7651609101195!3d-36.85411327211592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e40b110bdb%3A0x33589c20abd1f2e5!2sSubway!5e0!3m2!1sen!2snz!4v1762750885764!5m2!1sen!2snz"
             width="600"
@@ -211,6 +250,11 @@
         </div>
         <div>
           <h1>Sensational Chicken</h1>
+          <p>
+            Crispy fried chicken at budget-friendly prices. <br />
+            A student favorite for quick, tasty meals.
+          </p>
+          <p>Address: Mount St, Auckland CBD, Auckland 1010</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.498209650847!2d174.76410661011957!3d-36.8544919721159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e43d0f8e3d%3A0xa1543ff923499919!2sSensational%20Chicken%20Mount%20St!5e0!3m2!1sen!2snz!4v1762750922985!5m2!1sen!2snz"
             width="600"
@@ -221,8 +265,16 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+      </section>
+
+      <section class="food-locations-six card js-scale" data-section-name="Kebabs and campus food">
         <div>
           <h1>The Kebab and Chicken House</h1>
+          <p>
+            Delicious kebabs and chicken dishes at great prices. <br />
+            Perfect for a filling meal on a student budget.
+          </p>
+          <p>Address: Auckland CBD, Auckland 1010</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.4976833953997!2d174.7637576101196!3d-36.85450457211584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d4736d7dae221%3A0x61a0b58d095ade27!2sThe%20kebab%20and%20Chicken%20House!5e0!3m2!1sen!2snz!4v1762750960449!5m2!1sen!2snz"
             width="600"
@@ -233,7 +285,25 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+        <div>
+          <h1>Hiwa Recreation Centre</h1>
+          <p>
+            Community center with affordable food options. <br />
+            Great for students looking for budget meals and activities.
+          </p>
+          <p>Address: Auckland Central, Auckland 1010</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.580767194877!2d174.76647111011943!3d-36.85251527211641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e375b5143b%3A0xc0f98f41cd0f8e5b!2sHiwa%20Recreation%20Centre!5e0!3m2!1sen!2snz!4v1762750846936!5m2!1sen!2snz"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
+
       <script src="js/javascript.js"></script>
     </main>
     <footer>
