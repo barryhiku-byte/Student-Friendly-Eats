@@ -45,7 +45,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   width: 6px;
-  height: 300px;
+  height: 400px; /* Taller to spread labels more */
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   overflow: visible;
@@ -88,25 +88,30 @@ p {
 .progress-label {
   position: absolute;
   left: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
+  top: 0;
+  transform: translateY(-50%); /* Center on the marker position */
+  color: rgba(255, 255, 255, 0.5); /* Dimmed by default */
+  font-size: 13px; /* Slightly smaller to fit better */
   white-space: nowrap;
-  opacity: 0;
+  opacity: 0.6; /* Dimmed by default */
   transition: all 0.3s ease;
-  pointer-events: none;
+  pointer-events: auto; /* Enable clicking */
+  cursor: pointer; /* Show pointer cursor */
+  z-index: 1001; /* Above everything */
+  background: rgba(0, 0, 0, 0.5); /* Darker and more transparent by default */
+  padding: 3px 6px; /* Slightly smaller padding */
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.progress-marker.active + .progress-label {
+.progress-label.active {
   opacity: 1;
   color: #000000;
-  left: 10px;
   font-weight: bold;
   border: 2px solid white;
   border-radius: 5px;
-  padding: 2px 5px; 
-  background: rgba(255, 255, 255, 0.9); /* Changed from 0.1 to 0.9 - much more opaque */
+  padding: 3px 6px; /* Match default padding */
+  background: rgba(255, 255, 255, 0.9); /* Bright when active */
 }
 
 /* Popup animation */

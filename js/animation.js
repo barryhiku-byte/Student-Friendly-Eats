@@ -28,8 +28,41 @@ sections.forEach((section, index) => {
   label.className = 'progress-label';
   label.textContent = sectionName;
   
+  // Fixed position based on index
+  const spacing = 100 / (sections.length - 1); // Spread evenly
+  const position = index * spacing;
+  label.style.top = position + '%';
+  marker.style.top = position + '%';
+  
+  // Higher z-index for labels higher up (reverse index)
+  label.style.zIndex = 100 + (sections.length - index);
+  
   progressBar.appendChild(marker);
   progressBar.appendChild(label);
+  
+ 
+  label.addEventListener('click', () => {
+    
+    const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+    
+    // Calculate where center would be (where animation starts)
+    const viewportCenter = window.innerHeight / 1;
+    const scrollToCenterPosition = sectionTop - viewportCenter;
+    
+    // Check if scrolling up or down
+    const currentScroll = window.pageYOffset;
+    const scrollingDown = scrollToCenterPosition > currentScroll;
+    
+    // Adjust offset based on direction
+    const skipPhase1Offset = scrollingDown ? 1500 : 1;
+    const finalPosition = scrollToCenterPosition + skipPhase1Offset;
+    
+    
+    window.scrollTo({ 
+      top: finalPosition,
+      behavior: 'smooth' 
+    });
+  });
   
   markers.push({ marker, label, section });
 });
@@ -44,27 +77,27 @@ function updateProgressAndMarkers() {
   
   markers.forEach(({ marker, label, section }, index) => {
     const rect = section.getBoundingClientRect();
-    const sectionTop = rect.top + scrollTop;
-    const sectionPosition = (sectionTop / scrollHeight) * 100;
-    
-    marker.style.top = sectionPosition + '%';
-    label.style.top = sectionPosition + '%';
     
     const viewportCenter = window.innerHeight / 2;
     const isActive = rect.top < viewportCenter && rect.bottom > viewportCenter;
     const isIntroduction = section.getAttribute('data-section-name') === 'Introduction';
     
+    // Only toggle active state - position is fixed
     if (isIntroduction) {
       if (rect.bottom > 0 && rect.top < window.innerHeight) {
         marker.classList.add('active');
+        label.classList.add('active');
       } else {
         marker.classList.remove('active');
+        label.classList.remove('active');
       }
     } else {
       if (isActive) {
         marker.classList.add('active');
+        label.classList.add('active');
       } else {
         marker.classList.remove('active');
+        label.classList.remove('active');
       }
     }
   });
@@ -102,16 +135,15 @@ document.querySelectorAll(".js-scale").forEach((el) => {
   // Phase 2: Scroll content
   .to(el, {
     scrollTop: el.scrollHeight - el.clientHeight,
-    duration: 0.8,
+    duration: 0.5,
     ease: "none",
   })
   
-  // Phase 3: Fade out to the right
+  // Phase 3: Fade out (reverse of fade in)
   .to(el, {
-    x: "100vw", 
-    scale: 0.8,
-    opacity: -1,
-    duration: 0.8,
+    scale: 0.1,
+    opacity: 0,
+    duration: 0.9,
     ease: "power2.in",
   });
 });
