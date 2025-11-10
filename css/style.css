@@ -377,25 +377,23 @@ body {
 }
 
 .student-friendly_eats-hero{
- 
+    text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
     padding: 2rem;
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
-    color: rgb(0, 0, 0);
-    border: 3px solid rgba(0, 0, 0, 0.3);
+
+  
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     width: 100%;
-    
     box-sizing: border-box;
 }
-
+.student-friendly_eats-hero h1
 .student-friendly_eats-hero h1 {
-    margin: 0;
-    padding: 1rem 0;
+    color: rgba(255, 255, 255, 0.1);
 }
 
 main {
@@ -403,11 +401,13 @@ main {
 }
 
 .paragraphs {
-    margin: 10rem auto;
+    margin: 20rem auto;
     padding: 2rem;
     max-width: 900px;
 }
+
 }
+
 .food-locations-one div, .food-locations-two div, .food-locations-three div, .food-locations-four div {
     flex: 1;
     min-width: 0;
