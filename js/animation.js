@@ -113,7 +113,7 @@ document.querySelectorAll(".js-scale").forEach((el) => {
     scrollTrigger: {
       trigger: el,
       start: "center center",
-      end: "+=3500", 
+      end: "+=5000", 
       scrub: 1.5, 
       pin: true,
       // markers: true,
@@ -125,17 +125,17 @@ document.querySelectorAll(".js-scale").forEach((el) => {
     el,
     { scale: 0.1, opacity: -1 },
     { 
-      scale: 1.0,
-      opacity: 2,
+      scale: 0.7,
+      opacity: 1,
       ease: "power2.out",
-      duration: 1
+      duration: 50,
     }
   )
   
   // Phase 2: Scroll content
   .to(el, {
     scrollTop: el.scrollHeight - el.clientHeight,
-    duration: 0.5,
+    duration: 50,
     ease: "none",
   })
   
@@ -143,7 +143,7 @@ document.querySelectorAll(".js-scale").forEach((el) => {
   .to(el, {
     scale: 0.1,
     opacity: 0,
-    duration: 0.9,
+    duration: 50,
     ease: "power2.in",
   });
 });
