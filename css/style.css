@@ -4,26 +4,30 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    color: bisque;
+
+    
     width: 100%;
     height: 300px;
     /* same as hero height */
+    background: transparent;
 }
 
-.body {
-    background-color: rgb(255, 223, 183);
+body {
+    background-image: url('../images/image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+   
 }
 
-.main {
-    background-color: rgb(252, 222, 186);
-}
 
 .mobilenav {
     position: fixed;
     overflow: hidden;
-    background-color: bisque;
-    opacity: 70%;
+    background-color: rgb(168, 167, 167);
+    opacity: 80%;
     position: fixed;
     z-index: 10;
     top: 0;
@@ -46,11 +50,12 @@
 
 /* Style the hamburger menu */
 .mobilenav a.icon {
-    background: rgb(255, 223, 183);
+   
     display: block;
     position: fixed;
     right: 10;
     top: 10;
+    z-index: 10;
 }
 
 /* Add a grey background color on mouse-over */
@@ -71,8 +76,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
-    /* just one layer behind the nav */
+    z-index: 0;
+    /* behind the nav but visible */
 }
 
 /* Keep the body spacing consistent */
@@ -83,9 +88,9 @@ body {
 }
 
 .img {
-    width: 200px;
+    width: 50rem;
     /* set a fixed width */
-    height: 200px;
+    height: 50rem;
     /* set a fixed height */
     object-fit: cover;
     /* crop to fill without distortion */
@@ -94,26 +99,42 @@ body {
 }
 
 .webnav {
-    position: relative;
+    display: block;
+    position: fixed;
     z-index: 2;
-    /* ensures it’s above hero */
-    background-color: rgb(165, 201, 57);
+    /* ensures it's above hero */
+    background-color: rgb(168, 167, 167);
     /* transparent overlay */
     width: 100%;
+    justify-content: center;
     text-align: center;
     padding: 5px 0px;
 }
 
+.webnav a {
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+}
+
+.webnav a:hover {
+    background-color: rgb(168, 167, 167);
+    color: black;
+}
+
 .paragraphs {
-    text-align: center;
+    text-align: left;
     width: fit-content;
     align-items: center;
+    justify-content: center;
     padding: 15px;
-    margin: 25px auto;
+    margin: 3rem;
     border-radius: 5px;
     box-shadow: 4px 8px;
     box-shadow: 2px 7px 12px;
-    background-color: rgb(165, 201, 57);
+    background-color: rgb(168, 167, 167);
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -127,7 +148,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(252, 222, 186);
+ 
     padding: 30px 0;
     text-align: center;
 }
@@ -141,7 +162,7 @@ body {
 /* This wraps your images */
 .image-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 500px;
     /* keeps images from stretching too wide on big screens */
     overflow: hidden;
     display: flex;
@@ -162,6 +183,7 @@ body {
     object-fit: contain;
     /* ensures no cropping or distortion */
     border-radius: 12px;
+    padding: 10rem;
     transition: transform 0.3s ease;
 }
 
@@ -228,7 +250,7 @@ body {
 }
 
 
-    body {
+    body.signup-page {
 
       font-family: Arial, sans-serif;
 
@@ -242,7 +264,7 @@ body {
 
       align-items: center;
 
-      height: 100vh;
+      min-height: 100vh;
 
     }
  
@@ -342,23 +364,117 @@ body {
 
     }
 
-.food-locations-one, .food-locations-two, .food-locations-three, .food-locations-four {
+@media only screen and (min-width: 768px){
+    
+
+.food-locations-one, .food-locations-two, .food-locations-three, .food-locations-four, .food-locations-five, .food-locations-six {
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    margin: 20px auto;
-    width: 90%;
-    padding: 20px;
+    gap: 2rem;
+    margin: 3rem auto;
+    width: 70%;
+    padding: 1.5rem;
 }
 
-.food-locations-one div, .food-locations-two div, .food-locations-three div, .food-locations-four div {
+.student-friendly_eats-hero{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+
+  
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    box-sizing: border-box;
+}
+.student-friendly_eats-hero h1
+.student-friendly_eats-hero h1 {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+main {
+    padding: 2rem 0;
+}
+
+.paragraphs {
+    margin: 20rem auto;
+    padding: 2rem;
+    max-width: 900px;
+}
+
+}
+
+.spacer {
+    margin-top: 200vh;
+}
+.food-locations-one div, .food-locations-two div, .food-locations-three div, .food-locations-four div, .food-locations-five div, .food-locations-six div {
     flex: 1;
     min-width: 0;
+    margin-left: 4rem;
 }
 
-.food-locations-one iframe, .food-locations-two iframe, .food-locations-three iframe, .food-locations-four iframe {
+.food-locations-one iframe, .food-locations-two iframe, .food-locations-three iframe, .food-locations-four iframe, .food-locations-five iframe, .food-locations-six iframe {
     width: 100%;
-    height: 400px;
+    height: 300px;
     border: 2px solid #ccc;
     border-radius: 10px;
+    
 }
+
+.food-locations-one > div, .food-locations-two > div, .food-locations-three > div, .food-locations-four > div, .food-locations-five > div, .food-locations-six > div {
+   margin-top: 5rem;
+}
+
+/* Apply same styling to all location info divs */
+.food-locations-one > div:has(h1),
+.food-locations-two > div:has(h1),
+.food-locations-three > div:has(h1),
+.food-locations-four > div:has(h1),
+.food-locations-five > div:has(h1),
+.food-locations-six > div:has(h1) {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid rgb(84, 83, 83);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Quicksand', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+
+
+.food-locations-one h1,
+.food-locations-two h1,
+.food-locations-three h1,
+.food-locations-four h1,
+.food-locations-five h1,
+.food-locations-six h1 {
+    color: rgb(84, 83, 83);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.food-locations-one p,
+.food-locations-two p,
+.food-locations-three p,
+.food-locations-four p,
+.food-locations-five p,
+.food-locations-six p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 12px 0;
+    padding: 0;
+    background: none;
+    font-weight: 400;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+

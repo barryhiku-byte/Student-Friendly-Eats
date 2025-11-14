@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Home</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Home</title>
-</head>
-
-<body class="body">
-  <header class="header1">
-    <img src="images/hero_photo.jpg" alt="Campus Photo" class="hero">
-    <nav>
-      <div class="mobilenav">
-        <a href="#home" class="active"></a>
-        <!-- Navigation links (hidden by default) -->
-        <div id="myLinks">
-          <a href="images/about.html">About Us</a>
-          <a href="images/recipes.html">Recipes</a>
-          <a href="images/student-friendly_eats.html">Student-Friendly eats</a>
-          <a href="images/shopping_tips.html">Shopping Tips</a>
-          <a href="images/sign_up.html">Sign Up</a>
-          <i class="fa fa-bars"></i>
-        </div>
-
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          ☰
-        </a>
-      </div>
-    </nav>
-    <section class="this-is-da-way">
+  <body class="body">
+    <header class="header1">
       <nav>
-        <div class="webnav">
-          <a href="/about.html">About Us</a>
-          <a href="/recipes.html">Recipes</a>
-          <a href="/student-friendly_eats.html">Student-Friendly eats</a>
-          <a href="/shopping_tips.html">Shopping Tips</a>
-          <a href="/sign_up.html">Sign Up</a>
-        </div>
+        <div class="mobilenav">
+          <a href="#home" class="active"></a>
+          <!-- Navigation links (hidden by default) -->
+          <div id="myLinks">
+            <a href="/about.html">About Us</a>
+            <a href="/recipes.html">Recipes</a>
+            <a href="/student-friendly_eats.html">Student-Friendly eats</a>
+            <a href="/shopping_tips.html">Shopping Tips</a>
+            <a href="/sign_up.html">Sign Up</a>
+            <i class="fa fa-bars"></i>
+          </div>
+
+          <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            ☰
+          </a>
         </div>
       </nav>
-    </section>
-
-  </header>
-
-  <main class="main">
-
-
-    <section class="slideshow-section">
-      <div id="auto-slide-container">
-        <a id="auto-slide-link" href="#">
-          <img id="auto-slide-image" src="images/about.jpg" alt="Slideshow image">
-        </a>
-        <h2 id="auto-slide-title">About</h2>
+      <section class="this-is-da-way">
+        <nav>
+          <div class="webnav">
+            <a href="about.html">About Us</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="student-friendly_eats.html">Student-Friendly eats</a>
+            <a href="shopping_tips.html">Shopping Tips</a>
+            <a href="sign_up.html">Sign Up</a>
+          </div>
+        </nav>
+      </section>
+      <div>
+        <h1>Cheap Eats</h1>
       </div>
-    </section>
-    <section class="paragraphs">
-      <p>
-        Welcome to healthy & affordable Student Eating: From one student to another. <br>
-        Here you can a range of healthy & affordable recipes that are easily <br>
-        made at home, shopping tips, where to find your local supermarkets <br>
-        and find student-friendly places to dine out.
-      </p>
-    </section>
-  </main>
-</body>
+    </header>
 
-<script src="js/javascript.js" defer></script>
+    <main class="main">
+      <section class="slideshow-section">
+        <div id="auto-slide-container">
+          <a id="auto-slide-link" href="#">
+            <img
+              id="auto-slide-image"
+              src="images/about.jpg"
+              alt="Slideshow image"
+            />
+          </a>
+          <h2 id="auto-slide-title">About</h2>
+        </div>
+      </section>
+      <section class="paragraphs">
+        <p>
+          Welcome to healthy & affordable Student Eating: From one student to
+          another. <br />
+          Here you can a range of healthy & affordable recipes that are easily
+          <br />
+          made at home, shopping tips, where to find your local supermarkets
+          <br />
+          and find student-friendly places to dine out.
+        </p>
+      </section>
+    </main>
+  </body>
 
+  <script src="js/javascript.js" defer></script>
 </html>
